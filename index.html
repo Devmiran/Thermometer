@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="temperatura.css">
+    <title>Temperatura</title>
 </head>
+
 <body>
+   
+    <div class="contenedor-general">
+        <div class="contenedor-medio">
+    <div>
+        <h1>CONVERTIDOR DE <br> TEMPERATURA</h1>
+        <label class="uno" >Temperatura en  Farenheit<br></label>
+        <input type="number" id="marcador" >
+        <section type="number" id="resultado" class="dos" ></section>
+        <button id='convertir' class="convertir">Convertir</button>
+        <button id='reiniciar' class="reiniciar">reiniciar</button>
+       </div>
+       <div class="contenedor-rojo">
+           <div id="calentando"></div>
+        </div>
+    </div>
+   
+     
     
+    <script src="convertirT.js"></script>
+
 </body>
-</html>
