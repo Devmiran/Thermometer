@@ -1,21 +1,36 @@
-let boton=document.getElementById('convertir')
-boton.addEventListener("click", function(){
+let boton = document.getElementById('convertir')
+boton.addEventListener("click", function () {
 
-    let marcador=document.getElementById('marcador').value
-    /* console.log(marcador) */
-    const resultado1=document.getElementById('resultado')
-    
-    function cambiar(celcius){
-        let resultado=((celcius - 32 )/1.8).toFixed(1) ;
-        return resultado
-    }
-    resultado1.textContent=cambiar(marcador)
+    let marcador = document.getElementById('marcador').value
+    const resultado1 = document.getElementById('resultado')
 
-    function barrita(){
-        let barrita=cambiar(marcador)
-       document.getElementById('calentando').style.height=`${cambiar(marcador)}px`
-        
+
+
+    let resultado = ((marcador - 32) / 1.8).toFixed(1);
+    if (resultado > 100 || resultado < 0) {
+        alert('ERROR!!! Desbordamiento de valores');
+
+    }else{
+        resultado1.textContent = `${resultado}`;
+
+    document.getElementById('calentando').style.height = `${resultado}px`
+
+
     }
-    barrita()
     
+
+}
+
+)
+
+let boton1 = document.getElementById('reiniciar')
+boton1.addEventListener("click", function () {
+
+    document.getElementById('marcador').value = ``
+    document.getElementById('resultado').textContent = ``
+
+    document.getElementById('calentando').style.height = ``
+
+
 })
+
